@@ -3,23 +3,41 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Discover and search movies with ratings and reviews. Find your next favorite film." />
     <link rel="stylesheet" href="style.css" />
-    <title>Movie App</title>
+    <title>Should I Watch it? - Movie Discovery App</title>
   </head>
   <body>
-    <header>
-      <h1>Should I Watch it?
-      </h1>
-      <form id="form">
-        <input type="text" placeholder="Search" id="search" class="search" />
-      </form>
+    <header role="banner">
+      <h1>Should I Watch it?</h1>
+      <div class="search-container">
+        <form id="form" role="search" aria-label="Movie search">
+          <label for="search" class="sr-only">Search for movies</label>
+          <input 
+            type="text" 
+            placeholder="Search for movies..." 
+            id="search" 
+            class="search"
+            aria-describedby="search-help"
+            autocomplete="off"
+          />
+          <div id="search-help" class="sr-only">
+            Enter a movie title to search for reviews and ratings
+          </div>
+        </form>
+      </div>
     </header>
-    <main id="main"></main>
-    <footer class="footer">
+    
+    <main id="main" role="main" aria-live="polite" aria-label="Movie results">
+      <!-- Movies will be dynamically loaded here -->
+    </main>
+    
+    <footer class="footer" role="contentinfo">
       <p>
-        
+        &copy; 2024 Movie Discovery App. Data provided by The Movie Database (TMDb).
       </p>
     </footer>
+    
     <script src="script.js"></script>
   </body>
 </html>
