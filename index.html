@@ -14,12 +14,113 @@
         <input type="text" placeholder="Search" id="search" class="search" />
       </form>
     </header>
+    
+    <!-- Movie Categories Filter Section -->
+    <section class="filters-section">
+      <div class="filters-container">
+        <h2>Discover Movies by Category</h2>
+        <div class="filters-grid">
+          
+          <!-- Genre Filter -->
+          <div class="filter-group">
+            <label for="genre-filter">Genre:</label>
+            <select id="genre-filter" class="filter-select">
+              <option value="">All Genres</option>
+            </select>
+          </div>
+          
+          <!-- Language Filter -->
+          <div class="filter-group">
+            <label for="language-filter">Language:</label>
+            <select id="language-filter" class="filter-select">
+              <option value="">All Languages</option>
+            </select>
+          </div>
+          
+          <!-- Release Year Filter -->
+          <div class="filter-group">
+            <label for="year-filter">Release Year:</label>
+            <select id="year-filter" class="filter-select">
+              <option value="">All Years</option>
+            </select>
+          </div>
+          
+          <!-- Rating Filter -->
+          <div class="filter-group">
+            <label for="rating-filter">Rating:</label>
+            <select id="rating-filter" class="filter-select">
+              <option value="">All Ratings</option>
+            </select>
+          </div>
+          
+        </div>
+        
+        <!-- Advanced Filters Toggle -->
+        <div class="advanced-filters-toggle">
+          <button type="button" id="toggle-advanced" class="toggle-btn">
+            Show More Filters
+          </button>
+        </div>
+        
+        <!-- Advanced Filters (Hidden by default) -->
+        <div class="advanced-filters" id="advanced-filters" style="display: none;">
+          <div class="filters-grid">
+            
+            <!-- Country Filter -->
+            <div class="filter-group">
+              <label for="country-filter">Country/Region:</label>
+              <select id="country-filter" class="filter-select">
+                <option value="">All Countries</option>
+              </select>
+            </div>
+            
+            <!-- Audience Type Filter -->
+            <div class="filter-group">
+              <label for="audience-filter">Audience:</label>
+              <select id="audience-filter" class="filter-select">
+                <option value="">All Audiences</option>
+              </select>
+            </div>
+            
+            <!-- Runtime Filter -->
+            <div class="filter-group">
+              <label for="runtime-filter">Runtime:</label>
+              <select id="runtime-filter" class="filter-select">
+                <option value="">All Runtimes</option>
+              </select>
+            </div>
+            
+            <!-- Franchise Filter -->
+            <div class="filter-group">
+              <label for="franchise-filter">Franchise:</label>
+              <select id="franchise-filter" class="filter-select">
+                <option value="">All Franchises</option>
+              </select>
+            </div>
+            
+          </div>
+        </div>
+        
+        <!-- Filter Actions -->
+        <div class="filter-actions">
+          <button type="button" id="apply-filters" class="action-btn primary">
+            Apply Filters
+          </button>
+          <button type="button" id="clear-filters" class="action-btn secondary">
+            Clear All
+          </button>
+        </div>
+        
+      </div>
+    </section>
+    
     <main id="main"></main>
     <footer class="footer">
       <p>
         
       </p>
     </footer>
+    <script src="movie-categories.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
