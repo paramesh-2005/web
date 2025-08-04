@@ -8,17 +8,38 @@
   </head>
   <body>
     <header>
-      <h1>Should I Watch it?
-      </h1>
-      <form id="form">
-        <input type="text" placeholder="Search" id="search" class="search" />
-      </form>
+      <div class="container">
+        <div class="header-content">
+          <a href="/" class="logo">Should I Watch it?</a>
+          <form id="form" class="search-container">
+            <div class="search-icon">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m21 21-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+              </svg>
+            </div>
+            <input type="text" placeholder="Search for movies..." id="search" class="search" />
+          </form>
+        </div>
+      </div>
     </header>
-    <main id="main"></main>
+    
+    <main>
+      <div class="container">
+        <div id="loading" class="loading" style="display: none;">
+          <div class="loading-spinner"></div>
+          <span style="margin-left: 12px;">Loading movies...</span>
+        </div>
+        <div id="error-message" class="error-message" style="display: none;"></div>
+        <div id="main" class="movies-grid"></div>
+      </div>
+    </main>
+    
     <footer class="footer">
-      <p>
-        
-      </p>
+      <div class="container">
+        <div class="footer-content">
+          <p>&copy; 2024 Should I Watch it? - Discover your next favorite movie</p>
+        </div>
+      </div>
     </footer>
     <script src="script.js"></script>
   </body>
