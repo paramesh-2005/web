@@ -304,6 +304,250 @@ main {
   transform: translateY(0);
 }
 
+
+.search:focus {
+  outline: none;
+  background-color: var(--primary-color);
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.movie {
+  width: 300px;
+  margin: 1rem;
+  background-color: var(--secondary-color);
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  border-radius: 3px;
+}
+
+.movie img {
+  width: 100%;
+}
+
+.movie-info {
+  color: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem 1rem;
+  letter-spacing: 0.5px;
+}
+
+.movie-info h3 {
+  margin-top: 0;
+}
+
+.movie-info span {
+  background-color: var(--primary-color);
+  padding: 0.25rem 0.5rem;
+  border-radius: 3px;
+  font-weight: bold;
+}
+
+.movie-info span.green {
+  color: lightgreen;
+}
+
+.movie-info span.orange {
+  color: orange;
+}
+
+.movie-info span.red {
+  color: red;
+}
+
+.overview {
+  background-color: #fff;
+  padding: 2rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  max-height: 100%;
+  transform: translateY(101%);
+  overflow-y: auto;
+  transition: transform 0.3s ease-in;
+}
+
+.movie:hover .overview {
+  transform: translateY(0);
+}
+
+.footer p {
+  color: #eee;
+  text-align: center;
+}
+
+@media (max-width: 580px) {
+  header {
+    flex-direction: column;
+  }
+
+  header h1 {
+    padding: 0.5rem 1rem;
+  }
+  
+  .filters-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .filters-section {
+    padding: 1rem;
+  }
+}
+
+/* Movie Categories Filter Styles */
+.filters-section {
+  background-color: var(--secondary-color);
+  padding: 2rem;
+  margin: 0;
+}
+
+.filters-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.filters-container h2 {
+  color: #eee;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.filters-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter-group label {
+  color: #eee;
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
+.filter-select {
+  background-color: var(--primary-color);
+  border: 2px solid #444;
+  border-radius: 8px;
+  color: #eee;
+  padding: 0.75rem;
+  font-family: inherit;
+  font-size: 0.9rem;
+  transition: border-color 0.3s ease;
+}
+
+.filter-select:focus {
+  outline: none;
+  border-color: #7378c5;
+}
+
+.filter-select option {
+  background-color: var(--primary-color);
+  color: #eee;
+}
+
+.advanced-filters-toggle {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.toggle-btn {
+  background-color: transparent;
+  border: 2px solid #7378c5;
+  border-radius: 25px;
+  color: #7378c5;
+  padding: 0.75rem 1.5rem;
+  font-family: inherit;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.toggle-btn:hover {
+  background-color: #7378c5;
+  color: #fff;
+}
+
+.advanced-filters {
+  border-top: 1px solid #444;
+  padding-top: 2rem;
+  margin-top: 1rem;
+}
+
+.filter-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.action-btn {
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 25px;
+  font-family: inherit;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.action-btn.primary {
+  background-color: #7378c5;
+  color: #fff;
+}
+
+.action-btn.primary:hover {
+  background-color: #5a5f9d;
+  transform: translateY(-2px);
+}
+
+.action-btn.secondary {
+  background-color: transparent;
+  color: #eee;
+  border: 2px solid #666;
+}
+
+.action-btn.secondary:hover {
+  background-color: #666;
+  border-color: #888;
+}
+
+/* No results styling */
+.no-results {
+  text-align: center;
+  color: #eee;
+  padding: 4rem 2rem;
+  width: 100%;
+}
+
+.no-results h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #7378c5;
+}
+
+.no-results p {
+  font-size: 1rem;
+  opacity: 0.8;
+=======
 /* Footer Component */
 .footer {
   background: rgba(255, 255, 255, 0.05);
@@ -388,4 +632,5 @@ main {
   main {
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   }
+
 }
