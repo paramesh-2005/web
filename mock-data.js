@@ -33,7 +33,7 @@ const MOCK_MOVIES = [
     title: "The Matrix",
     poster_path: "/f89U3ADr1oiB1s9GkdPOEpXUk5H.jpg",
     vote_average: 8.7,
-    overview: "Set in the 22nd century, The Matrix tells the story of a computer programmer who is led to fight an underground war against powerful computers who have constructed his entire reality with a system called the Matrix."
+    overview: "Set in the 22nd century, The Matrix tells the story of a computer programmer who is led to fight an underground war against powerful computers who have constructed his entire reality with their system."
   },
   {
     id: 6,
